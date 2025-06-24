@@ -1,0 +1,6 @@
+# Secrets and config
+.env
+
+# Build outputs
+**/bin/
+**/obj/
