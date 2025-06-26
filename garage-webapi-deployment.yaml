@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: garage-webapi
+  namespace: garage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: garage-webapi
+  template:
+    metadata:
+      labels:
+        app: garage-webapi
+    spec:
+      containers:
+        - name: garage-webapi
+          image: darkbreath/garage-webapi:latest
+          ports:
+            - containerPort: 80
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: "Development"

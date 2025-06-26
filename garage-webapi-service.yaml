@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: garage-webapi
+  namespace: garage
+spec:
+  selector:
+    app: garage-webapi
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: ClusterIP

@@ -1,6 +1,13 @@
 # Secrets and config
 .env
+k8s/**/postgres-secret.yaml
 
 # Build outputs
 **/bin/
 **/obj/
+
+# Docker & K8s
+*.log
+*.crt
+*.key
+
