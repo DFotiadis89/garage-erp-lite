@@ -1,0 +1,22 @@
+USER-SUPPLIED VALUES:
+loki:
+  config:
+    schema_config:
+      configs:
+      - index:
+          period: 24h
+          prefix: index_
+        object_store: filesystem
+        schema: v11
+        store: boltdb-shipper
+  persistence:
+    enabled: true
+    size: 5Gi
+    storageClassName: local-path
+    volumeBindingMode: Immediate
+  storage_config:
+    boltdb_shipper:
+      active_index_directory: C:/Program Files/Git/var/loki/index
+      cache_location: C:/Program Files/Git/var/loki/boltdb-cache
+    filesystem:
+      directory: C:/Program Files/Git/var/loki/chunks
